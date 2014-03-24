@@ -10,21 +10,25 @@
     </message>
     <message>
         <location filename="targetgenerator.ui" line="29"/>
+        <source>&amp;Target</source>
+        <translation>&amp;Cible</translation>
+    </message>
+    <message>
         <location filename="targetgenerator.ui" line="41"/>
         <source>Target</source>
         <translation>Cible</translation>
     </message>
     <message>
         <location filename="targetgenerator.ui" line="51"/>
-        <location filename="targetgenerator.ui" line="525"/>
-        <location filename="targetgenerator.ui" line="612"/>
-        <location filename="targetgenerator.ui" line="699"/>
+        <location filename="targetgenerator.ui" line="532"/>
+        <location filename="targetgenerator.ui" line="619"/>
+        <location filename="targetgenerator.ui" line="706"/>
         <source>Parameters:</source>
         <translation>Paramètres :</translation>
     </message>
     <message>
         <location filename="targetgenerator.ui" line="62"/>
-        <location filename="targetgenerator.ui" line="309"/>
+        <location filename="targetgenerator.ui" line="316"/>
         <source>Type:</source>
         <translation>Type :</translation>
     </message>
@@ -51,11 +55,11 @@
     </message>
     <message>
         <location filename="targetgenerator.ui" line="116"/>
-        <location filename="targetgenerator.ui" line="561"/>
-        <location filename="targetgenerator.ui" line="598"/>
-        <location filename="targetgenerator.ui" line="658"/>
-        <location filename="targetgenerator.ui" line="685"/>
-        <location filename="targetgenerator.ui" line="735"/>
+        <location filename="targetgenerator.ui" line="568"/>
+        <location filename="targetgenerator.ui" line="605"/>
+        <location filename="targetgenerator.ui" line="665"/>
+        <location filename="targetgenerator.ui" line="692"/>
+        <location filename="targetgenerator.ui" line="742"/>
         <source>mm</source>
         <translation>mm</translation>
     </message>
@@ -91,129 +95,133 @@
         <translation>Bit de parité :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="243"/>
+        <location filename="targetgenerator.ui" line="246"/>
         <source>Inverse parity:</source>
         <translation>Inverser la parité :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="253"/>
+        <location filename="targetgenerator.ui" line="260"/>
         <source>Gray code:</source>
         <translation>Code de Gray :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="282"/>
-        <location filename="targetgenerator.ui" line="294"/>
+        <location filename="targetgenerator.ui" line="289"/>
+        <source>&amp;Grid</source>
+        <translation>&amp;Grille</translation>
+    </message>
+    <message>
+        <location filename="targetgenerator.ui" line="301"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="324"/>
+        <location filename="targetgenerator.ui" line="331"/>
         <source>Dots</source>
         <translation>Points</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="356"/>
+        <location filename="targetgenerator.ui" line="363"/>
         <source>Targets</source>
         <translation>Cibles</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="382"/>
+        <location filename="targetgenerator.ui" line="389"/>
         <source>ChessBoard</source>
         <translation>Echiquier</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="405"/>
+        <location filename="targetgenerator.ui" line="412"/>
         <source>Position:</source>
         <translation>Position :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="420"/>
+        <location filename="targetgenerator.ui" line="427"/>
         <source>Standard</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="452"/>
+        <location filename="targetgenerator.ui" line="459"/>
         <source>Shifted</source>
         <translation>Décalé</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="475"/>
+        <location filename="targetgenerator.ui" line="482"/>
         <source>Dimension:</source>
         <translation>Dimension :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="486"/>
+        <location filename="targetgenerator.ui" line="493"/>
         <source>Horizontal:</source>
         <translation>Horizontale :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="503"/>
+        <location filename="targetgenerator.ui" line="510"/>
         <source>Vertical:</source>
         <translation>Verticale :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="533"/>
+        <location filename="targetgenerator.ui" line="540"/>
         <source>Dot size:</source>
         <translation>Taille des points :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="570"/>
-        <location filename="targetgenerator.ui" line="630"/>
+        <location filename="targetgenerator.ui" line="577"/>
+        <location filename="targetgenerator.ui" line="637"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="623"/>
+        <location filename="targetgenerator.ui" line="630"/>
         <source>Target size:</source>
         <translation>Taille des cibles :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="707"/>
+        <location filename="targetgenerator.ui" line="714"/>
         <source>Square size:</source>
         <translation>Taille des carrés :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="749"/>
+        <location filename="targetgenerator.ui" line="756"/>
         <source>Values:</source>
         <translation>Valeurs :</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="760"/>
+        <location filename="targetgenerator.ui" line="767"/>
         <source>Generate</source>
         <translation>Générer</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="819"/>
+        <location filename="targetgenerator.ui" line="826"/>
         <source>Export SVG</source>
         <translation>Exporter en SVG</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="826"/>
+        <location filename="targetgenerator.ui" line="833"/>
         <source>Export PDF</source>
         <translation>Exporter en PDF</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="833"/>
+        <location filename="targetgenerator.ui" line="840"/>
         <source>Export image</source>
         <translation>Exporter en image</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="840"/>
+        <location filename="targetgenerator.ui" line="847"/>
         <source>Quit</source>
         <translation>Quitter</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="859"/>
+        <location filename="targetgenerator.ui" line="866"/>
         <source>&amp;Menu</source>
         <translation>&amp;Menu</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="868"/>
+        <location filename="targetgenerator.ui" line="875"/>
         <source>&amp;Quit</source>
         <translation>&amp;Quitter</translation>
     </message>
     <message>
-        <location filename="targetgenerator.ui" line="871"/>
+        <location filename="targetgenerator.ui" line="878"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>

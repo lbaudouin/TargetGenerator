@@ -24,9 +24,9 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="tabTarget">
        <attribute name="title">
-        <string>Target</string>
+        <string>&amp;Target</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
@@ -239,13 +239,20 @@
              </item>
              <item row="7" column="0">
               <widget class="QLabel" name="inverseParityLabel">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="text">
                 <string>Inverse parity:</string>
                </property>
               </widget>
              </item>
              <item row="7" column="1">
-              <widget class="QCheckBox" name="inverseParityCheckBox"/>
+              <widget class="QCheckBox" name="inverseParityCheckBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
              </item>
              <item row="8" column="0">
               <widget class="QLabel" name="grayCodeLabel">
@@ -277,9 +284,9 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="tabGrid">
        <attribute name="title">
-        <string>Grid</string>
+        <string>&amp;Grid</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_18">
         <item>
@@ -318,7 +325,7 @@
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">QPushButton:checked {  background-color: rgb(170, 255, 127); }</string>
+                <string notr="true">QPushButton:checked {  color:black; background-color: rgb(170, 255, 127); }</string>
                </property>
                <property name="text">
                 <string>Dots</string>
@@ -350,7 +357,7 @@
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">QPushButton:checked {  background-color: rgb(170, 255, 127); }</string>
+                <string notr="true">QPushButton:checked {  color:black; background-color: rgb(170, 255, 127); }</string>
                </property>
                <property name="text">
                 <string>Targets</string>
@@ -376,7 +383,7 @@
              <item>
               <widget class="QPushButton" name="chessboardButton">
                <property name="styleSheet">
-                <string notr="true">QPushButton:checked {  background-color: rgb(170, 255, 127); }</string>
+                <string notr="true">QPushButton:checked {  color:black; background-color: rgb(170, 255, 127); }</string>
                </property>
                <property name="text">
                 <string>ChessBoard</string>
@@ -414,7 +421,7 @@
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">QPushButton:checked {  background-color: rgb(170, 255, 127); }</string>
+                <string notr="true">QPushButton:checked {  color:black; background-color: rgb(170, 255, 127); }</string>
                </property>
                <property name="text">
                 <string>Standard</string>
@@ -446,7 +453,7 @@
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">QPushButton:checked {  background-color: rgb(170, 255, 127); }</string>
+                <string notr="true">QPushButton:checked {  color:black; background-color: rgb(170, 255, 127); }</string>
                </property>
                <property name="text">
                 <string>Shifted</string>
@@ -906,6 +913,38 @@
     <hint type="destinationlabel">
      <x>287</x>
      <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>parityBitCheckBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>inverseParityCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>parityBitCheckBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>inverseParityLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>341</y>
     </hint>
    </hints>
   </connection>
