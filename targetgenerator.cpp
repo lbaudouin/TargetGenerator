@@ -140,7 +140,7 @@ void TargetGenerator::drawOneBlob(QPainter &painter, QPointF center, double diam
     //Black circle
     painter.setPen(Qt::black);
     painter.setBrush(Qt::black);
-    painter.drawEllipse(center,radius*1.0/3.0,radius*1.0/3.0);
+    painter.drawEllipse(center,radius*1.0/2.0,radius*1.0/2.0);
 }
 
 
@@ -524,6 +524,8 @@ void TargetGenerator::pressGenerate()
         values.push_back(m);
         i++;
     }
+
+    qSort(values);
 
     QString text;
     foreach(int val, values)
