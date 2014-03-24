@@ -1,0 +1,27 @@
+<TargetType>_<NbHeaderBits>h<HeaderValue>_<NbMessageBits>m<MessageValue>_[p[i]<ParityValue>_]<CodeType>
+
+TargetType:
+ - 1B : One blob
+ - 3B : Three blobs
+ - 2R : Two rings
+
+NbHeaderBits/NbMessageBits:
+ - Number of bits for the header/message
+
+HeaderValue/MessageValue:
+ - Decimal value of the header/message
+
+ParityValue:
+ - Optional parity (header+message) : 1 for odd, 0 for even
+ - 'i' option inverse parity value (0 for odd, 1 for even)
+
+CodeType:
+ - bin : Binary
+ - gray : Gray code
+
+Example:
+ - 1B_8h180_8m142_bin.png
+ - 1B_8h180_8m142_p0_bin.png
+ - 3B_8h180_8m142_gray.png
+ - 3B_8h168_8m131_pi1_bin.png
+ - 2R_8h180_8m142_bin

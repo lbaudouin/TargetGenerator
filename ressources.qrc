@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="icon">images/target.png</file>
+        <file alias="chessboard">images/chessboard.png</file>
+        <file alias="dots">images/dots.png</file>
+        <file alias="dots_shifted">images/dots_shifted.png</file>
+        <file alias="targets">images/targets.png</file>
+    </qresource>
+    <qresource prefix="/lang">
+        <file alias="fr">TargetGenerator_fr.qm</file>
+    </qresource>
+</RCC>
