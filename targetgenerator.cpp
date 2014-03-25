@@ -306,10 +306,8 @@ void TargetGenerator::drawTargetGrid(QPainter &painter, int nbCols, int nbRows, 
     valuesString.replace("."," ");
     valuesString.replace("\n"," ");
     valuesString.replace("\t"," ");
-    while(valuesString.contains("  "))
-        valuesString.replace("  "," ");
 
-    QStringList valuesStringList = valuesString.split(" ");
+    QStringList valuesStringList = valuesString.split(" ",QString::SkipEmptyParts);
     QList<int> values;
 
     for(int i=0;i<valuesStringList.size();i++){
@@ -737,9 +735,9 @@ QSize TargetGenerator::computeSize()
         double squareSize = pixelPerMillimeter * ui->squareSizeSpinBox->value();
 
         switch(gridType){
-        case Dots: return QSize(nbCols*dotDistance, nbRows*dotDistance+(position==Shifted?dotDistance/2.0:0)); break;
-        case Targets: return QSize(nbCols*targetDistance, nbRows*targetDistance+(position==Shifted?targetDistance/2.0:0)); break;
-        case Chessboard: return QSize(nbCols*squareSize,nbRows*squareSize); break;
+        case Dots: return QSize(nbCols*dotDistance, nbRows*dotDistance+(position==Shifted?dotDistance/2.0:0)) + QSize(0,25); break;
+        case Targets: return QSize(nbCols*targetDistance, nbRows*targetDistance+(position==Shifted?targetDistance/2.0:0))+ QSize(0,25); break;
+        case Chessboard: return QSize(nbCols*squareSize,nbRows*squareSize)+ QSize(0,25); break;
         default: return QSize(0,0);
         }
     }
