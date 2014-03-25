@@ -6,7 +6,22 @@
 
 QT       += core gui svg
 
-TARGET = TargetGenerator
+unix {
+    TARGET = targetgenerator
+
+    isEmpty(PREFIX){
+        PREFIX = /usr/local/bin/
+    }
+
+    target.path = $$PREFIX
+
+    INSTALLS += target
+}
+
+win32 {
+    TARGET = TargetGenerator
+}
+
 TEMPLATE = app
 
 
@@ -19,7 +34,17 @@ HEADERS  += targetgenerator.h \
 
 FORMS    += targetgenerator.ui
 
+
+TRANSLATIONS = TargetGenerator_fr.ts
+
+QMAKE_EXTRA_COMPILERS += lrelease
+lrelease.input         = TRANSLATIONS
+lrelease.output        = ${QMAKE_FILE_BASE}.qm
+lrelease.commands      = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm ${QMAKE_FILE_BASE}.qm
+lrelease.CONFIG       += no_link target_predeps
+
 RESOURCES += \
     ressources.qrc
 
-TRANSLATIONS = TargetGenerator_fr.ts
+OTHER_FILES += README
+

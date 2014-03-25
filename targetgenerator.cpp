@@ -165,7 +165,7 @@ void TargetGenerator::drawThreeBlobs(QPainter &painter, QPointF center, double d
     //White circle
     painter.setPen(Qt::white);
     painter.setBrush(Qt::white);
-    painter.drawEllipse(center,radius*4.0/5.0,radius*4.0/5.0);
+    painter.drawEllipse(center,radius*3.7/5.0,radius*3.7/5.0);
 
     //Black circle
     painter.setPen(Qt::black);
@@ -203,7 +203,7 @@ void TargetGenerator::drawTwoRings(QPainter &painter, QPointF center, double dia
     for(int i=0;i<message.size();i++){
         if(message.at(i)=='1'){
             //The startAngle and spanAngle must be specified in 1/16th of a degree
-            painter.drawPie(QRectF(center.x()-diameter*4.0/12.0,center.y()-diameter*4.0/12.0,diameter*4.0/6.0,diameter*4.0/6.0),i*angle*16,angle*16);
+            painter.drawPie(QRectF(center.x()-diameter*4.3/12.0,center.y()-diameter*4.3/12.0,diameter*4.3/6.0,diameter*4.3/6.0),i*angle*16,angle*16);
         }
     }
 
@@ -225,7 +225,7 @@ void TargetGenerator::drawTwoRings(QPainter &painter, QPointF center, double dia
     //White circle
     painter.setPen(Qt::white);
     painter.setBrush(Qt::white);
-    painter.drawEllipse(center,radius*2.0/6.0,radius*2.0/6.0);
+    painter.drawEllipse(center,radius*1.8/6.0,radius*1.8/6.0);
 
     //Black circle
     painter.setPen(Qt::black);
@@ -697,9 +697,24 @@ QString TargetGenerator::generateName()
         int targetDistance = ui->targetDistanceSpinBox->value();
         int size = ui->squareSizeSpinBox->value();
 
+        TargetType targetType;
+        switch(ui->typeComboBox->currentIndex()){
+        case 0: targetType = OneBlob; break;
+        case 1: targetType = ThreeBlobs; break;
+        case 2: targetType = TwoRings; break;
+        default: targetType = OneBlob; break;
+        }
+
+        QString modelName;
+        switch(targetType){
+        case OneBlob: modelName = "1B"; break;
+        case ThreeBlobs: modelName = "3B"; break;
+        case TwoRings: modelName = "2R"; break;
+        }
+
         switch(gridType){
         case Dots: return QString("grid_dots%1_%2x%3_%4").arg(position==Shifted?"_shifted":"").arg(nbCols).arg(nbRows).arg(dotDistance);
-        case Targets: return QString("grid_targets%1_%2x%3_%4").arg(position==Shifted?"_shifted":"").arg(nbCols).arg(nbRows).arg(targetDistance);
+        case Targets: return QString("grid_targets_%1%2_%3x%4_%5").arg(modelName).arg(position==Shifted?"_shifted":"").arg(nbCols).arg(nbRows).arg(targetDistance);
         case Chessboard: return QString("grid_chessboard_%1x%2_%3").arg(nbCols).arg(nbRows).arg(size);
         default: return  QString("grid_%1x%2").arg(nbCols).arg(nbRows);
         }

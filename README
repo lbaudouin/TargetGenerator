@@ -19,7 +19,15 @@ Need :
  - Qt 4.8
  - QtLinguist
 
+Warnings and Error:
+ - RCC: Error in 'ressources.qrc': Cannot find file 'TargetGenerator_fr.qm'
+ >>> The file will be created at the first 'make'
+
 Build process:
- - lrelease TargetGenerator.pro
  - qmake
  - make
+
+Install process:
+ - qmake PREFIX=install_folder_path
+ - make
+ - make install     #or sudo make install
