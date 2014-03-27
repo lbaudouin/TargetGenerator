@@ -7,8 +7,8 @@
 #
 # This software is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Lesser Public License for more details.  You should have
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Lesser Public License for more details. You should have
 # received a copy of the GNU Lesser General Public License along with
 # software. If not, see <http://www.gnu.org/licenses/>.
 
@@ -19,7 +19,7 @@ Need :
  - Qt 4.8
  - QtLinguist
 
-Warnings and Error:
+Warnings and Errors:
  - RCC: Error in 'ressources.qrc': Cannot find file 'TargetGenerator_fr.qm'
  >>> The file will be created at the first 'make'
 

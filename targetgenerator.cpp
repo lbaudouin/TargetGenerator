@@ -1,3 +1,17 @@
+// Copyright 2014, Léo Baudouin
+//
+// This file is part of a free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation, either version 3 of
+// the License, or (at your option) any later version.
+//
+// This software is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details. You should have
+// received a copy of the GNU General Public License along with
+// this software. If not, see <http://www.gnu.org/licenses/>.
+
 #include "targetgenerator.h"
 #include "ui_targetgenerator.h"
 
@@ -44,6 +58,7 @@ TargetGenerator::TargetGenerator(QWidget *parent) :
     connect(ui->horizontalSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
     connect(ui->verticalSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
     connect(ui->dotSizeSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
+    connect(ui->targetSizeSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
     connect(ui->squareSizeSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
     connect(ui->valuesEdit,SIGNAL(textChanged()),this,SLOT(updateGrid()));
 
