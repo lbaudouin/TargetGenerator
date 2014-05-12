@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>634</width>
+    <width>1096</width>
     <height>878</height>
    </rect>
   </property>
@@ -30,7 +30,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <widget class="QLabel" name="targetLabel">
+         <widget class="Label" name="targetLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -264,6 +264,20 @@
              <item row="8" column="1">
               <widget class="QCheckBox" name="grayCodeCheckBox"/>
              </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="printNameLabel">
+               <property name="text">
+                <string>Print name:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QCheckBox" name="printNameCheckBox">
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
@@ -290,7 +304,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_18">
         <item>
-         <widget class="QLabel" name="gridLabel">
+         <widget class="Label" name="gridLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -857,7 +871,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>634</width>
+     <width>1096</width>
      <height>25</height>
     </rect>
    </property>
@@ -880,6 +894,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header location="global">label.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="ressources.qrc"/>
  </resources>

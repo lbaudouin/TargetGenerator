@@ -62,6 +62,7 @@ TargetGenerator::TargetGenerator(QWidget *parent) :
     connect(ui->squareSizeSpinBox,SIGNAL(valueChanged(int)),this,SLOT(updateGrid()));
     connect(ui->valuesEdit,SIGNAL(textChanged()),this,SLOT(updateGrid()));
 
+    connect(ui->printNameCheckBox,SIGNAL(clicked()),this,SLOT(updateTarget()));
     connect(ui->tabWidget,SIGNAL(currentChanged(int)),this,SLOT(tabChanged(int)));
     connect(ui->generateButton,SIGNAL(clicked()),this,SLOT(pressGenerate()));
 
@@ -79,6 +80,11 @@ TargetGenerator::TargetGenerator(QWidget *parent) :
 TargetGenerator::~TargetGenerator()
 {
     delete ui;
+}
+
+void TargetGenerator::resizeEvent(QResizeEvent *event)
+{
+
 }
 
 void TargetGenerator::headerChanged(int header)
@@ -448,9 +454,13 @@ void TargetGenerator::updateTarget()
 
     QString name = generateName();
 
-    painter.drawText(pix.rect(),name);
+    if(ui->printNameCheckBox->isChecked()){
+        painter.drawText(pix.rect(),name);
+    }
 
-    ui->targetLabel->setPixmap( pix.scaled(600,600,Qt::KeepAspectRatio) );
+    m_target = pix;
+
+    ui->targetLabel->setFullSizePixmap( m_target );
 }
 
 void TargetGenerator::updateGrid()
@@ -463,7 +473,9 @@ void TargetGenerator::updateGrid()
 
     drawGrid(painter);
 
-    ui->gridLabel->setPixmap( pix.scaled(600,600,Qt::KeepAspectRatio) );
+    m_grid = pix;
+
+    ui->gridLabel->setFullSizePixmap( m_grid );
 }
 
 void TargetGenerator::tabChanged(int tabIndex)
@@ -567,11 +579,13 @@ void TargetGenerator::pressExportImage()
     QPainter painter(&pix);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    if(ui->tabWidget->currentIndex()==0)
-        painter.drawText(pix.rect(),name);
-    else{
-        QRect rect = pix.rect();
-        painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+    if(ui->printNameCheckBox->isChecked()){
+        if(ui->tabWidget->currentIndex()==0)
+            painter.drawText(pix.rect(),name);
+        else{
+            QRect rect = pix.rect();
+            painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+        }
     }
 
     draw(painter);
@@ -594,11 +608,13 @@ void TargetGenerator::pressExportPDF()
     QPainter painter(&printer);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    if(ui->tabWidget->currentIndex()==0)
-        painter.drawText(printer.pageRect(),name);
-    else{
-        QRect rect = printer.pageRect();
-        painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+    if(ui->printNameCheckBox->isChecked()){
+        if(ui->tabWidget->currentIndex()==0)
+            painter.drawText(printer.pageRect(),name);
+        else{
+            QRect rect = printer.pageRect();
+            painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+        }
     }
 
     draw(painter);
@@ -624,11 +640,13 @@ void TargetGenerator::pressExportSVG()
     QPainter painter(&generator);
     painter.fillRect(QRect(QPoint(0,0), size),Qt::white);
 
-    if(ui->tabWidget->currentIndex()==0)
-        painter.drawText(generator.viewBox(),name);
-    else{
-        QRect rect = generator.viewBox();
-        painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+    if(ui->printNameCheckBox->isChecked()){
+        if(ui->tabWidget->currentIndex()==0)
+            painter.drawText(generator.viewBox(),name);
+        else{
+            QRect rect = generator.viewBox();
+            painter.drawText(QRect(rect.x(),rect.height()-25,rect.width(),25),name);
+        }
     }
 
     draw(painter);
