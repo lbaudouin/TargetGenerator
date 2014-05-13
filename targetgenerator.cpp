@@ -82,11 +82,6 @@ TargetGenerator::~TargetGenerator()
     delete ui;
 }
 
-void TargetGenerator::resizeEvent(QResizeEvent *event)
-{
-
-}
-
 void TargetGenerator::headerChanged(int header)
 {
     m_highlighter->setForbiddenValues( QList<int>() << header);

@@ -21,8 +21,6 @@
 #include <QFileDialog>
 #include <QImageWriter>
 
-#include <QResizeEvent>
-
 #include <QSvgGenerator>
 
 #include <QPrinter>
@@ -53,8 +51,6 @@ public:
     enum GridPosition { Stantard = 0, Shifted };
 
 protected:
-    void resizeEvent(QResizeEvent *event);
-
     void drawChessboard(QPainter &painter, int nbCols, int nbRows, int size);
     void drawDotGrid(QPainter &painter, int nbCols, int nbRows, int distance, int size);
     void drawTargetGrid(QPainter &painter, int nbCols, int nbRows, int distance, int diameter);
