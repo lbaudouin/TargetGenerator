@@ -12,7 +12,7 @@
 // received a copy of the GNU General Public License along with
 // this software. If not, see <http://www.gnu.org/licenses/>.
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QTranslator>
 #include <QLibraryInfo>
 

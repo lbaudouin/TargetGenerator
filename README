@@ -16,12 +16,12 @@
 Build project
 
 Need :
- - Qt 4.8
+ - Qt 4.6 or newer
  - QtLinguist
 
 Warnings and Errors:
  - RCC: Error in 'ressources.qrc': Cannot find file 'TargetGenerator_fr.qm'
- >>> The file will be created at the first 'make'
+ >>> The file will be created at the first 'make', if not try 'lrelease *.pro'
 
 Build process:
  - qmake
